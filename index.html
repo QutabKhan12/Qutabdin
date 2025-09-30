@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Optimization -->
+    <title>Qutab Din | AI Expert, Web Developer & Cyber Security Specialist</title>
+    <meta name="description" content="Portfolio of Qutab Din – AI Developer, Cyber Security Expert, and Freelancer on Fiverr & Upwork. Specialized in WordPress, Blogger, and AI-powered solutions.">
+    <meta name="keywords" content="AI Expert, Web Developer, Cyber Security, WordPress, Blogger, Fiverr, Upwork, Pakistan Freelancer, Qutab Din">
+    <meta name="author" content="Qutab Din">
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind to use a custom dark theme and 'Inter' font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e40ff',
+                        'secondary-cyan': '#00eaff',
+                        'dark-bg': '#0a0a1a',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    keyframes: {
+                        'gradient-shift': {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        'typing': {
+                            'from': { width: '0' },
+                            'to': { width: '100%' },
+                        },
+                        'blink-caret': {
+                            'from, to': { borderColor: 'transparent' },
+                            '50%': { borderColor: '#00eaff' },
+                        },
+                        'pulse-glow': {
+                            '0%, 100%': { boxShadow: '0 0 10px rgba(30, 64, 255, 0.4)' },
+                            '50%': { boxShadow: '0 0 20px rgba(0, 234, 255, 0.6)' },
+                        },
+                        'shimmer': {
+                            '0%': { textShadow: '0 0 5px rgba(255, 255, 255, 0.5)' },
+                            '50%': { textShadow: '0 0 10px #00eaff' },
+                            '100%': { textShadow: '0 0 5px rgba(255, 255, 255, 0.5)' },
+                        }
+                    },
+                    animation: {
+                        'gradient-bg': 'gradient-shift 15s ease infinite',
+                        'pulse-card-animation': 'pulse-glow 6s infinite alternate',
+                        'logo-shimmer': 'shimmer 4s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles for futuristic look and animations -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a1a;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        /* Animated background for Hero */
+        .hero-bg {
+            background: linear-gradient(-45deg, #0a0a1a, #1a1a2e, #1e40ff, #00eaff);
+            background-size: 400% 400%;
+            animation: gradient-shift 15s ease infinite;
+        }
+
+        /* Glassmorphism base style */
+        .glass-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Typewriter effect styles */
+        .typewriter-text {
+            overflow: hidden; /* Ensures the content is not revealed until the animation */
+            border-right: .15em solid #00eaff; /* The typewriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .05em; /* Adjust as needed */
+            animation: 
+                typing 4s steps(40, end) infinite,
+                blink-caret .75s step-end infinite;
+        }
+        
+        /* Scroll Animation (Fade In Up) */
+        .scroll-animate {
+            transition: all 0.8s ease-out;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Active Navbar Link Highlight */
+        .nav-link.active {
+            color: #00eaff;
+            border-bottom: 2px solid #00eaff;
+        }
+
+        /* Custom progress bar styles */
+        .progress-bar-container {
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+        .progress-bar {
+            height: 100%;
+            transition: width 1.5s ease-out;
+            background: linear-gradient(90deg, #1e40ff, #00eaff);
+        }
+
+        /* NEW: Project Card Hover Glow and Tilt */
+        .project-card {
+            border: 2px solid transparent;
+            transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+        }
+        .project-card:hover {
+            border-color: #00eaff; /* Cyan border on hover */
+            box-shadow: 0 0 50px rgba(0, 234, 255, 0.6); /* Enhanced cyan glow for impact */
+            transform: scale(1.05) rotateZ(0.5deg); /* Subtle tilt and scale */
+        }
+        
+        /* NEW: Footer Text Glow */
+        .footer-glow {
+            text-shadow: 0 0 5px #00eaff, 0 0 10px #1e40ff;
+            transition: text-shadow 0.5s;
+        }
+    </style>
+</head>
+
+<body class="bg-dark-bg">
+
+    <!-- Sticky Navigation Bar -->
+    <nav id="navbar" class="sticky top-0 z-50 glass-card p-4 transition-all duration-300">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- NEW: Logo Shimmer Animation -->
+            <a href="#hero" class="text-2xl font-bold text-white tracking-widest hover:text-secondary-cyan transition duration-300 animate-logo-shimmer">QUTAB DIN</a>
+            <div id="nav-menu" class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link text-white hover:text-secondary-cyan transition duration-300">About</a>
+                <a href="#skills" class="nav-link text-white hover:text-secondary-cyan transition duration-300">Skills</a>
+                <a href="#services" class="nav-link text-white hover:text-secondary-cyan transition duration-300">Services</a>
+                <a href="#projects" class="nav-link text-white hover:text-secondary-cyan transition duration-300">Projects</a>
+                <a href="#contact" class="nav-link text-white hover:text-secondary-cyan transition duration-300">Contact</a>
+            </div>
+            <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="md:hidden absolute top-full left-0 w-full glass-card p-4 transition-all duration-300 transform -translate-y-full opacity-0 pointer-events-none">
+            <a href="#about" class="block py-2 nav-link text-white hover:text-secondary-cyan transition duration-300" onclick="document.getElementById('mobile-menu').classList.remove('active')">About</a>
+            <a href="#skills" class="block py-2 nav-link text-white hover:text-secondary-cyan transition duration-300" onclick="document.getElementById('mobile-menu').classList.remove('active')">Skills</a>
+            <a href="#services" class="block py-2 nav-link text-white hover:text-secondary-cyan transition duration-300" onclick="document.getElementById('mobile-menu').classList.remove('active')">Services</a>
+            <a href="#projects" class="block py-2 nav-link text-white hover:text-secondary-cyan transition duration-300" onclick="document.getElementById('mobile-menu').classList.remove('active')">Projects</a>
+            <a href="#contact" class="block py-2 nav-link text-white hover:text-secondary-cyan transition duration-300" onclick="document.getElementById('mobile-menu').classList.remove('active')">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-center p-4">
+        <div class="max-w-4xl mx-auto z-10">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-4 leading-tight">
+                Qutab Din
+            </h1>
+            <p id="typewriter" class="text-xl sm:text-3xl font-light text-secondary-cyan h-8 typewriter-text inline-block"></p>
+            <div class="mt-12 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="https://www.fiverr.com/your-username" target="_blank" class="bg-primary-blue hover:bg-opacity-80 transition duration-300 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-primary-blue/50 transform hover:scale-[1.02] active:scale-95">
+                    Hire Me (Fiverr/Upwork)
+                </a>
+                <a href="cv/Qutab_Din_CV.pdf" download="Qutab_Din_CV.pdf" class="bg-transparent border-2 border-secondary-cyan text-secondary-cyan font-semibold py-3 px-8 rounded-full shadow-lg shadow-secondary-cyan/30 transition duration-300 transform hover:scale-[1.02] active:scale-95 hover:bg-secondary-cyan/20">
+                    Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-10">
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-secondary-cyan scroll-animate">About Me</h2>
+            <!-- NEW: Pulsing Card Animation for About section -->
+            <div class="glass-card p-8 md:p-12 rounded-2xl max-w-4xl mx-auto scroll-animate animate-pulse-card-animation">
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    I am **Qutab Din**, a dedicated **AI Developer, Cyber Security Expert, and Professional Freelancer** based in Pakistan. My mission is to build intelligent, secure, and user-centric digital solutions that drive real-world results.
+                </p>
+                <p class="mt-6 text-lg text-gray-300 leading-relaxed">
+                    With a robust foundation in web technologies, my expertise seamlessly blends modern web development (HTML, CSS, JS) with cutting-edge AI integration and critical cyber security practices. I specialize in delivering high-quality client work via platforms like **Fiverr** and **Upwork**, focusing particularly on **WordPress, Blogger, Custom AI solutions, Digital Designing, and Editing**. I deliver scalable, secure, and visually stunning projects that consistently exceed client expectations.
+                </p>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-primary-blue scroll-animate">Skills & Expertise</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill Card 1: AI Development -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-2xl hover:shadow-secondary-cyan/20 transition duration-300 scroll-animate">
+                    <h3 class="text-2xl font-semibold mb-3 text-secondary-cyan">AI Development</h3>
+                    <p class="text-sm text-gray-400 mb-4">Building custom models and integrating AI services.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" data-progress="95" style="width:0;"></div>
+                    </div>
+                </div>
+                
+                <!-- Skill Card 2: Web Development (HTML, CSS, JS) -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-2xl hover:shadow-primary-blue/20 transition duration-300 scroll-animate">
+                    <h3 class="text-2xl font-semibold mb-3 text-primary-blue">Web Development</h3>
+                    <p class="text-sm text-gray-400 mb-4">Mastery of core front-end languages (HTML, CSS, JavaScript).</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" data-progress="90" style="width:0;"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3: Cyber Security -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-2xl hover:shadow-secondary-cyan/20 transition duration-300 scroll-animate">
+                    <h3 class="text-2xl font-semibold mb-3 text-secondary-cyan">Cyber Security</h3>
+                    <p class="text-sm text-gray-400 mb-4">Implementing secure practices and vulnerability analysis.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" data-progress="85" style="width:0;"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4: WordPress/Blogger -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-2xl hover:shadow-primary-blue/20 transition duration-300 scroll-animate">
+                    <h3 class="text-2xl font-semibold mb-3 text-primary-blue">CMS Expertise</h3>
+                    <p class="text-sm text-gray-400 mb-4">Expert setup, customization, and maintenance of WordPress and Blogger.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" data-progress="90" style="width:0;"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 5: Designing & Editing -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-2xl hover:shadow-secondary-cyan/20 transition duration-300 scroll-animate">
+                    <h3 class="text-2xl font-semibold mb-3 text-secondary-cyan">Designing & Editing</h3>
+                    <p class="text-sm text-gray-400 mb-4">Creating engaging visuals and digital content.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" data-progress="80" style="width:0;"></div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 6: Freelancing & Client Management -->
+                <div class="glass-card p-6 rounded-xl hover:shadow-2xl hover:shadow-primary-blue/20 transition duration-300 scroll-animate">
+                    <h3 class="text-2xl font-semibold mb-3 text-primary-blue">Freelancing</h3>
+                    <p class="text-sm text-gray-400 mb-4">Effective communication, project delivery, and client satisfaction.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" data-progress="99" style="width:0;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-secondary-cyan scroll-animate">My Services</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service Card 1: AI Development -->
+                <div class="glass-card p-8 rounded-xl flex flex-col items-center text-center transform hover:scale-[1.03] transition duration-300 scroll-animate">
+                    <!-- Icon: Brain/Chip -->
+                    <svg class="w-12 h-12 text-primary-blue mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 0-4 4v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2h-2V6a4 4 0 0 0-4-4zM8 10h8v10H8V10z"/></svg>
+                    <h3 class="text-xl font-semibold mb-2">AI Development</h3>
+                    <p class="text-gray-300">Custom machine learning solutions, automation, and intelligent system integration.</p>
+                </div>
+
+                <!-- Service Card 2: Cyber Security -->
+                <div class="glass-card p-8 rounded-xl flex flex-col items-center text-center transform hover:scale-[1.03] transition duration-300 scroll-animate">
+                    <!-- Icon: Shield -->
+                    <svg class="w-12 h-12 text-secondary-cyan mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <h3 class="text-xl font-semibold mb-2">Cyber Security</h3>
+                    <p class="text-gray-300">Website hardening, vulnerability testing, and security protocol implementation.</p>
+                </div>
+
+                <!-- Service Card 3: Web Development -->
+                <div class="glass-card p-8 rounded-xl flex flex-col items-center text-center transform hover:scale-[1.03] transition duration-300 scroll-animate">
+                    <!-- Icon: Code -->
+                    <svg class="w-12 h-12 text-primary-blue mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-300">Modern, responsive, and high-performance websites built with HTML, CSS, and JavaScript.</p>
+                </div>
+                
+                <!-- Service Card 4: WordPress/Blogger -->
+                <div class="glass-card p-8 rounded-xl flex flex-col items-center text-center transform hover:scale-[1.03] transition duration-300 scroll-animate">
+                    <!-- Icon: Feather/Pen -->
+                    <svg class="w-12 h-12 text-secondary-cyan mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                    <h3 class="text-xl font-semibold mb-2">CMS Management</h3>
+                    <p class="text-gray-300">Full lifecycle management for WordPress & Blogger: setup, theme customization, and optimization.</p>
+                </div>
+
+                <!-- Service Card 5: Designing & Editing -->
+                <div class="glass-card p-8 rounded-xl flex flex-col items-center text-center transform hover:scale-[1.03] transition duration-300 scroll-animate">
+                    <!-- Icon: Palette -->
+                    <svg class="w-12 h-12 text-primary-blue mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-9.84 8.21c-.08.61.42 1.12 1.03 1.12.5.01.99-.2 1.35-.55l3.52-3.52 3.52 3.52c.35.35.85.54 1.35.54.61 0 1.11-.5 1.03-1.12A10 10 0 0 0 12 2z"/><path d="M12 14v8M3 15h18M3 18h18M3 21h18"/></svg>
+                    <h3 class="text-xl font-semibold mb-2">Designing & Editing</h3>
+                    <p class="text-gray-300">Creative design services for web assets, social media, and photo/video editing.</p>
+                </div>
+
+                <!-- Service Card 6: Freelancing -->
+                <div class="glass-card p-8 rounded-xl flex flex-col items-center text-center transform hover:scale-[1.03] transition duration-300 scroll-animate">
+                    <!-- Icon: Dollar Sign -->
+                    <svg class="w-12 h-12 text-secondary-cyan mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    <h3 class="text-xl font-semibold mb-2">Freelancing</h3>
+                    <p class="text-gray-300">Reliable, professional service and project management on all major platforms.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-primary-blue scroll-animate">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                
+                <!-- Project Card 1 - NEW: custom hover class applied -->
+                <div class="project-card group relative overflow-hidden rounded-xl scroll-animate">
+                    <img src="https://raw.githubusercontent.com/QutabKhan12/Qutabdin/main/port1.png" 
+                         alt="AI-Powered E-commerce Platform (port1.png)" 
+                         class="w-full h-auto object-cover transition duration-500 group-hover:scale-105" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/800x500/1e40ff/ffffff?text=Project+1+Image+Fallback';"
+                    >
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition duration-500">
+                        <h3 class="text-2xl font-bold text-secondary-cyan mb-2">AI E-commerce Platform</h3>
+                        <p class="text-gray-300 mb-4">A custom web solution integrated with an AI recommendation engine.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm font-medium text-white px-4 py-2 rounded-full bg-primary-blue hover:bg-opacity-80 transition duration-300">View Project</a>
+                            <a href="#" class="text-sm font-medium text-secondary-cyan px-4 py-2 rounded-full border border-secondary-cyan hover:bg-secondary-cyan/20 transition duration-300">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 - NEW: custom hover class applied -->
+                <div class="project-card group relative overflow-hidden rounded-xl scroll-animate">
+                    <img src="https://placehold.co/800x500/00eaff/0a0a1a?text=Project+2+%5Bport2.png%5D" 
+                         alt="Cyber Security Audit Dashboard (port2.png)" 
+                         class="w-full h-auto object-cover transition duration-500 group-hover:scale-105" 
+                         onerror="this.onerror=null;this.src='https://placehold.co/800x500/00eaff/0a0a1a?text=Project+2+%5Bport2.png%5D';"
+                    >
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition duration-500">
+                        <h3 class="text-2xl font-bold text-primary-blue mb-2">Security Audit Dashboard</h3>
+                        <p class="text-gray-300 mb-4">A real-time dashboard for monitoring security vulnerabilities and compliance.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-sm font-medium text-white px-4 py-2 rounded-full bg-primary-blue hover:bg-opacity-80 transition duration-300">View Project</a>
+                            <a href="#" class="text-sm font-medium text-secondary-cyan px-4 py-2 rounded-full border border-secondary-cyan hover:bg-secondary-cyan/20 transition duration-300">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 text-secondary-cyan scroll-animate">Get In Touch</h2>
+            <div class="grid lg:grid-cols-2 gap-10">
+                
+                <!-- Contact Form (Glassmorphism) -->
+                <div class="glass-card p-8 md:p-10 rounded-2xl scroll-animate">
+                    <h3 class="text-2xl font-bold mb-6 text-primary-blue">Send Me a Message</h3>
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-300 mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-secondary-cyan" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-secondary-cyan" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-300 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-secondary-cyan" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-secondary-cyan text-dark-bg font-bold py-3 rounded-lg shadow-lg hover:shadow-secondary-cyan/50 transition duration-300 transform hover:scale-[1.01] active:scale-95">
+                            Send Message
+                        </button>
+                    </form>
+                    <p id="form-message" class="mt-4 text-center text-sm text-secondary-cyan hidden">Thank you for your message! I'll be in touch soon.</p>
+                </div>
+                
+                <!-- Contact Details & Socials (Glassmorphism) -->
+                <div class="glass-card p-8 md:p-10 rounded-2xl flex flex-col justify-between scroll-animate">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 text-secondary-cyan">Contact Details</h3>
+                        <div class="space-y-4 text-lg">
+                            <p class="flex items-center">
+                                <span class="text-primary-blue mr-3 text-xl">📧</span> 
+                                Email: <a href="mailto:mrqutabkhan@gmail.com" class="ml-2 hover:text-secondary-cyan transition duration-300">mrqutabkhan@gmail.com</a>
+                            </p>
+                            <p class="flex items-center">
+                                <span class="text-primary-blue mr-3 text-xl">📱</span> 
+                                Phone: <a href="tel:+923079158842" class="ml-2 hover:text-secondary-cyan transition duration-300">+92 307 9158842</a>
+                            </p>
+                            <p class="flex items-start">
+                                <span class="text-primary-blue mr-3 text-xl">📍</span> 
+                                Address: <span class="ml-2">Kot Sabzel, Sadiqabad (64350), Pakistan</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6 border-t border-white/10">
+                        <h3 class="text-xl font-bold mb-4 text-primary-blue">Find Me Online</h3>
+                        <div class="flex space-x-4">
+                            <!-- Social Icon: Fiverr -->
+                            <a href="https://www.fiverr.com/your-username" target="_blank" class="text-gray-300 hover:text-secondary-cyan glow transition duration-300">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm3.535 15.632h-3.088a.382.382 0 0 1-.382-.383v-4.148h-.764v4.148a.382.382 0 0 1-.382.383H8.465a.382.382 0 0 1-.382-.383v-7.151c0-.21.172-.382.382-.382h.764c.21 0 .382.172.382.382v3.088h.764V7.618a.382.382 0 0 1 .382-.382h3.088c.21 0 .382.172.382.382v7.151c0 .21-.172.382-.382.382zM12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"/></svg>
+                            </a>
+                            <!-- Social Icon: Upwork -->
+                            <a href="https://www.upwork.com/your-username" target="_blank" class="text-gray-300 hover:text-secondary-cyan glow transition duration-300">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1.84 4.5h2.174c.732 0 1.325.593 1.325 1.325v1.895h-2.174v-1.895c0-.21-.172-.382-.382-.382h-1.325c-.21 0-.382.172-.382.382v4.88c0 .21.172.382.382.382h1.325c.21 0 .382-.172.382-.382V12.11h2.174v1.543c0 .732-.593 1.325-1.325 1.325h-2.174c-.732 0-1.325-.593-1.325-1.325V7.825c0-.732.593-1.325 1.325-1.325zM12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"/></svg>
+                            </a>
+                            <!-- Social Icon: LinkedIn -->
+                            <a href="https://linkedin.com/in/your-profile" target="_blank" class="text-gray-300 hover:text-secondary-cyan glow transition duration-300">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2V9zm3-4a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+                            </a>
+                            <!-- Social Icon: GitHub -->
+                            <a href="https://github.com/your-username" target="_blank" class="text-gray-300 hover:text-secondary-cyan glow transition duration-300">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.864 8.169 6.83 9.49.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.37-1.34-3.37-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.004.07 1.531 1.032 1.531 1.032.892 1.527 2.341 1.087 2.91.828.092-.643.354-1.087.643-1.343-2.22-.253-4.555-1.116-4.555-4.949 0-1.092.39-1.983 1.03-2.68-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025.798-.223 1.649-.335 2.498-.337.849.002 1.7.114 2.498.337 1.91-1.295 2.75-1.025 2.75-1.025.546 1.378.203 2.397.098 2.65.64.697 1.03 1.588 1.03 2.68 0 3.841-2.335 4.691-4.566 4.94.359.307.678.924.678 1.865 0 1.343-.013 2.427-.013 2.75 0 .267.18.577.688.484C20.137 20.165 23 16.416 23 12c0-5.523-4.477-10-10-10z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/20 p-6 text-center border-t border-white/10">
+        <p class="text-sm text-gray-400">
+            &copy; <span id="copyright-year" class="text-secondary-cyan font-medium footer-glow"></span> Qutab Din. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- JavaScript for Typewriter, Scroll Animation, and Navigation -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set Copyright Year
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            // --- Typewriter Effect Logic ---
+            const roles = ["AI Expert", "Web Developer", "Cyber Security Specialist", "Freelancer"];
+            const typewriterElement = document.getElementById('typewriter');
+            let roleIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+
+            function type() {
+                const currentRole = roles[roleIndex % roles.length];
+                let displayedText = currentRole.substring(0, charIndex);
+                
+                typewriterElement.textContent = `— ${displayedText}`;
+
+                if (!isDeleting) {
+                    charIndex++;
+                    if (charIndex > currentRole.length) {
+                        isDeleting = true;
+                        typingSpeed = 100; // Pause briefly after typing
+                    }
+                } else {
+                    charIndex--;
+                    if (charIndex === 0) {
+                        isDeleting = false;
+                        roleIndex++;
+                        typingSpeed = 150; // Pause briefly before starting next role
+                    }
+                }
+
+                let speed = isDeleting ? 50 : 100;
+                if (!isDeleting && charIndex === currentRole.length) speed = 2000; // Long pause at end of word
+
+                setTimeout(type, speed);
+            }
+
+            type();
+
+
+            // --- Intersection Observer for Scroll Animations ---
+            const animateElements = document.querySelectorAll('.scroll-animate');
+            const skillsBars = document.querySelectorAll('.progress-bar');
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Animate Skill Bars
+                        if (entry.target.classList.contains('glass-card') && entry.target.parentElement.id === 'skills') {
+                            const progressBar = entry.target.querySelector('.progress-bar');
+                            if (progressBar) {
+                                const progress = progressBar.getAttribute('data-progress');
+                                progressBar.style.width = progress + '%';
+                            }
+                        }
+                        
+                        // Stop observing once visible to prevent re-animation on scroll up/down
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the item is visible
+            });
+
+            animateElements.forEach(el => observer.observe(el));
+
+
+            // --- Smooth Scrolling & Navbar Active State ---
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            // Function to update active link
+            function updateActiveLink() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - document.getElementById('navbar').offsetHeight - 5;
+                    if (scrollY >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.href.includes(current) && current !== '') {
+                        link.classList.add('active');
+                    }
+                });
+            }
+
+            // Smooth scroll on click
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    const offset = document.getElementById('navbar').offsetHeight;
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - offset,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Update on scroll
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink(); // Initial check on load
+
+            // --- Mobile Menu Toggle ---
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+                if (mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.add('translate-y-0', 'opacity-100');
+                } else {
+                    mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                }
+            });
+
+            // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                    mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+                    menuButton.focus(); // Return focus to the menu button
+                });
+            });
+
+
+            // --- Contact Form Submission Simulation ---
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Simulate form submission success
+                contactForm.reset();
+                formMessage.classList.remove('hidden');
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+
+                // In a real application, you would use fetch() here to send data to a backend service like Firebase, Netlify Forms, or a custom API.
+                console.log('Form submission simulated. Data not sent to a server.');
+            });
+        });
+    </script>
+</body>
+</html>
